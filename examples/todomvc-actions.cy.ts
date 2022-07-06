@@ -1,6 +1,6 @@
 /// <reference types='cypress'/>
 
-import { TodoPage } from '../page-objects/todo-page';
+import { TodoPage } from '../cypress/page-objects/todo-page';
 
 describe('Learning Cypress', () => {
   const todoPage = new TodoPage();

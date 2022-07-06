@@ -13,7 +13,7 @@ describe('filtering', () => {
 
   it('should filter "Active" todos', () => {
     cy.contains('Active').click();
-    cy.get('.todo-list li').should('have.length', 2);
+    cy.get()).should('have.length', 2);
   });
 
   it('should filter "Completed" todos', () => {
