@@ -19,6 +19,8 @@
   "homepage": "https://github.com/arashid-sh/cypress-framework#readme",
   "devDependencies": {
     "cypress": "^10.3.0",
+    "cypress-dotenv": "^2.0.0",
+    "dotenv": "^16.0.1",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "@applitools/eyes-cypress": "^3.26.3",
+    "camelcase": "^6.3.0",
     "cypress": "^10.3.0",
     "moment": "^2.29.1"
   }

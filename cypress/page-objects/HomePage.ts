@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-import { Selector } from '@applitools/eyes-cypress';
+import { stringToSlug } from '../utils';
 
 export const HomePage = {
   elements: {
@@ -11,9 +11,10 @@ export const HomePage = {
   selectStoreLocation(store: string): void {
     cy.get(HomePage.elements.pickUpTile).click();
     cy.get(HomePage.elements.searchBar).type(store + '{enter}');
-    cy.get('[data-testid="location-card-container-demo-four"]').click();
+    cy.get(
+      `[data-testid="location-card-container-${stringToSlug(store)}"]`
+    ).click();
     cy.get('[data-testid="menupage.warm-bowls-category"]').click();
-    cy.get('');
   },
 
   clickOnStore(): void {},

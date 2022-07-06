@@ -1,20 +1,20 @@
+/// <reference types='cypress'/>
+
 import moment from 'moment';
 import { HomePage } from '../page-objects/HomePage';
-/// <reference types='cypress'/>
 
 describe('test cases', () => {
   beforeEach(() => {
+    // console.log(Cypress.env('BASIC_AUTH_USER'));
     cy.visit('/', {
       auth: {
-        username: 'sweetgreen',
-        password: 'Sw@@tgr33n!2007',
+        username: `${Cypress.env('BASIC_AUTH_USER')}`,
+        password: `${Cypress.env('BASIC_AUTH_PASSWORD')}`,
       },
     });
-    cy.setCookie('OptanonAlertBoxClosed', moment().format());
   });
 
   it('add item to bag', () => {
     HomePage.selectStoreLocation('demo four');
-    // HomePage.clickOnStore();
   });
 });
